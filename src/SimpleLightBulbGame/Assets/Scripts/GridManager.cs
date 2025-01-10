@@ -40,7 +40,7 @@ public class GridManager : MonoBehaviour
         CheckWin();
     }
 
-   public void CheckWin(){
+    public void CheckWin(){
         for(int x = 0; x < _size; x++){
             for(int z = 0; z < _size; z++){
                 if(!grid[z , x].GetComponent<LightBulbManager>().getIsOn()) //Check if the light bulb is on if not it stops checking
@@ -48,5 +48,18 @@ public class GridManager : MonoBehaviour
             } 
         }
         Debug.Log("You won");
+   }
+
+    //Turn off all the light bulbs
+   public void Reset(){
+        for(int x = 0; x < _size; x++){
+            for(int z = 0; z < _size; z++){
+                grid[z , x].GetComponent<LightBulbManager>().TurnOff();
+            }
+        }
+   }
+   public void Update(){
+        if(Input.GetKeyDown("r"))
+            Reset();
    }
 }
