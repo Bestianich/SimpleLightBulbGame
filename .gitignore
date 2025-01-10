@@ -71,3 +71,9 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+src/SimpleLightBulbGame/Library
+src/SimpleLightBulbGame/ProjectSettings
+src/SimpleLightBulbGame/Logs
+src/SimpleLightBulbGame/Packages
+src/SimpleLightBulbGame/UserSettings
+src/SimpleLightBulbGame/.vscode
