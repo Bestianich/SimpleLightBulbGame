@@ -2,9 +2,9 @@
 
 This is a simple **Light bulb puzzle game** made in **unity**
 
-For now the light bulbs turn on only in a X shape.
+For now the light bulbs turn on only in a **CROSS** shape.
 
-When a light bulb is on and is in the range of the the X, it turns off.
+When a light bulb is on and is in the range of the the **CROSS**, it turns off.
 
 The goal is to turn on all the light bulbs.
 
