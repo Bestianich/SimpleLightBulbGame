@@ -8,8 +8,9 @@ public class LightBulbManager : MonoBehaviour
     public Material BulbOffMaterial;
     [SerializeField] MeshRenderer BulbMeshRenderer;
     [SerializeField] private bool isOn = false;
+    public GridManager gridManager;
     public void TurnOn(){
-        BulbMeshRenderer.material = BulbOnMaterial;
+        BulbMeshRenderer.material = BulbOnMaterial; 
         isOn = true;
     }
 
@@ -26,11 +27,16 @@ public class LightBulbManager : MonoBehaviour
         }
     }
 
+    public bool getIsOn(){
+        return isOn;
+    }
     public void OnMouseDown(){
-        Toggle();
+        gridManager.ToggleTShape((int)transform.position.x , (int)transform.position.z);
+        //Toggle();
     }
 
     public void Awake(){
         BulbMeshRenderer = this.GetComponent<MeshRenderer>();
+        gridManager = this.transform.parent.GetComponent<GridManager>();
     }
 }
