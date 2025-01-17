@@ -234,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &791326055
 RectTransform:
   m_ObjectHideFlags: 0
@@ -621,9 +621,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5852cca9fc9d674ca381fbcc66b23d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _size: 4
+  _size: 3
   LightBulbPrefab: {fileID: 2631365140673932430, guid: 512b7494b4ce3d74297018486903829f, type: 3}
-  winTextMeshRenderer: {fileID: 791326057}
+  wintText: {fileID: 791326054}
 --- !u!1 &1763838048
 GameObject:
   m_ObjectHideFlags: 0

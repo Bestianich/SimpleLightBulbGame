@@ -9,8 +9,13 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int _size = 5;
     
     [SerializeField] private GameObject[,] grid;
+    [SerializeField] private bool hasWin = false;
     
     public GameObject LightBulbPrefab;
+    public GameObject wintText;
+
+
+
     
 
     public void Awake(){
@@ -46,12 +51,17 @@ public class GridManager : MonoBehaviour
                 if(!grid[z , x].GetComponent<LightBulbManager>().getIsOn()) //Check if the light bulb is on if not it stops checking
                     return;
             } 
-        }
+        }        
         Debug.Log("You won");
+        wintText.gameObject.SetActive(true);
+        hasWin = true;
    }
 
     //Turn off all the light bulbs
    public void Reset(){
+    if(hasWin){
+        wintText.gameObject.SetActive(false);
+    }
         for(int x = 0; x < _size; x++){
             for(int z = 0; z < _size; z++){
                 grid[z , x].GetComponent<LightBulbManager>().TurnOff();
